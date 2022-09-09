@@ -10,19 +10,22 @@ const platos = [
         id: 2,
         nombre: 'Risotto de berenjena',
         precio: 'U$S 47.00',
-        descripcion: 'Risotto de berenjena y queso de cabra'
+        descripcion: 'Risotto de berenjena y queso de cabra',
+        imagen: '/images/Risotto-berenjena-queso-cabra.jpg'
     },
     {
         id: 3,
         nombre: 'Mousse de arroz',
         precio: 'U$S 27.50',
-        descripcion: 'Mousse de arroz con leche y aroma de azahar'
+        descripcion: 'Mousse de arroz con leche y aroma de azahar',
+        imagen: '/images/Mousse-de-arroz-con-leche.jpg'
     },
     {
         id: 4,
         nombre: 'Espárragos blancos',
         precio: 'U$S 37.50',
-        descripcion: 'Espárragos blancos con vinagreta de verduras y jamón ibérico'
+        descripcion: 'Espárragos blancos con vinagreta de verduras y jamón ibérico',
+        imagen: '/images/esparragos.png'
     }
 
 ]
@@ -30,7 +33,7 @@ const platos = [
 
 const controller = {
     home: function (req, res){
-        res.render('index');
+        res.render('index', {platos: platos});
     },
     detalleMenu: function (req, res){
         let platoEncontrado = platos.find(plato => {
